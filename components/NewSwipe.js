@@ -1,26 +1,40 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
+import { View, Text, Button, StyleSheet} from 'react-native'
+import people from "../data/people.json"
 import CleanCard from "./CleanCard"
-import TinderCard from 'react-tinder-card'
-
-const onSwipe = (direction) => {
-  console.log('You swiped: ' + direction)
-}
-
-const onCardLeftScreen = (myIdentifier) => {
-  console.log(myIdentifier + ' left the screen')
-}
 
 const NewSwipe = () => {
     return (
-        <View>
-            <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>
-                <CleanCard></CleanCard>
+        <View style={styles.container}>
+           
+                <CleanCard people={people}></CleanCard>
 
-            </TinderCard>
+
+
+       
         </View>
     )
 }
 
 export default NewSwipe
+
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "#000"
+
+    },
+    icon : {
+
+
+
+    },
+    circle: {
+        width: 44,
+        height: 44,
+        borderRadius: 44/2,
+        backgroundColor: "beige",
+
+ 
+     }
+})

@@ -17,8 +17,8 @@ export default function App() {
           screenOptions={{
             headerShown: false
           }}>
-              <Stack.Screen name="Home" component={HomeScreen} />
               <Stack.Screen name="NewSwipe" component={NewSwipe} />
+              <Stack.Screen name="Home" component={HomeScreen} />
           </Stack.Navigator>
     </NavigationContainer>
   );
@@ -27,8 +27,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'red',
+
   },
 });
